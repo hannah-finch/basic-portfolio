@@ -16,7 +16,42 @@ body {
   line-height: 1.5;
 }
 
-header, .banner {
+header {
+  padding-right: 5%;
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: var(--dark);
+  background-color: var(--accent01);
+  padding: 0 2% 0 8%;
+  flex: 0 0 auto;
+}
+
+nav li {
+  float: left;
+}
+
+nav a {
+  display: block;
+  font-size: 120%;
+  color: var(--accent02);
+  text-decoration: none;
+  border-bottom: 3px solid var(--accent02);
+  padding: 4px 8px;
+  margin: 6px;
+}
+
+nav a:hover {
+  background-color: var(--accent02);
+  color: var(--dark)
+}
+
+.banner {
   padding: 5%;
 }
 
@@ -29,7 +64,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 200%;
+  font-size: 210%;
 }
 
 h2 {
@@ -44,12 +79,7 @@ p {
   margin: 2% 0;
 }
 
-nav a {
-  font-size: 120%;
-  color: var(--accent02);
-  text-decoration: none;
-  border-bottom: 3px solid var(--accent02); 
-}
+
 
 .contact-info a {
   font-size: 120%;
