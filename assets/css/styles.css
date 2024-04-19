@@ -1,0 +1,59 @@
+:root {
+  --light: #f0f9ff;
+  --mid: #475873;
+  --dark: #00072d;
+  --accent01: #db5461;
+  --accent02: #36827f;
+}
+
+body {
+  background-color: var(--light);
+  display: flex;
+  flex-direction: column;
+  color: var(--mid);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+header, .banner {
+  padding: 5%;
+}
+
+main {
+  margin: 0 10%;
+}
+
+h1, h2, h3 {
+  margin: 2% 0;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 180%;
+}
+
+h3 {
+  font-size: 150%;
+}
+
+p {
+  margin: 2% 0;
+}
+
+nav a {
+  font-size: 120%;
+  color: var(--accent02);
+  text-decoration: none;
+  border-bottom: 3px solid var(--accent02); 
+}
+
+.contact-info a {
+  font-size: 120%;
+  color: var(--mid);
+  text-decoration: none;
+  border-bottom: 3px solid var(--mid); 
+}
