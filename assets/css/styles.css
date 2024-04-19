@@ -53,6 +53,8 @@ nav a:hover {
 
 .banner {
   padding: 5%;
+  background-image: url('../images/pattern.jpg');
+  background-size: cover;
 }
 
 main {
@@ -79,7 +81,25 @@ p {
   margin: 2% 0;
 }
 
+.project {
 
+}
+
+#project-01 {
+  background-image: url('../images/horiseon-screenshot.png');
+}
+#project-02 {
+  background-image: url('../images/lights.jpg');
+}
+#project-03 {
+  background-image: url('../images/calculator.jpg');
+}
+#project-04 {
+  background-image: url('../images/puzzle.jpg');
+}
+#project-05 {
+  background-image: url('../images/run.jpg');
+}
 
 .contact-info a {
   font-size: 120%;
