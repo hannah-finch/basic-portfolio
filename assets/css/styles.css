@@ -17,7 +17,7 @@ body {
 }
 
 header {
-  padding-right: 5%;
+  padding: 8px 5% 0px 0px;
   background-color: var(--dark);
   display: flex;
   flex-direction: row;
@@ -28,8 +28,26 @@ header {
 .title {
   color: var(--dark);
   background-color: var(--accent01);
-  padding: 0 2% 0 8%;
+  padding: 0 12px 0 8%;
   flex: 0 0 auto;
+}
+
+.banner {
+  padding: 0 6%;
+  background-image: url('../images/pattern.jpg');
+  background-size: cover;
+  display: flex;
+  height: 20em;
+  justify-content: flex-end;
+  
+}
+
+.subtitle {
+  color: var(--light);
+  background-color: var(--accent02);
+  align-self: flex-end;
+  padding: 2px 12px;
+
 }
 
 nav li {
@@ -49,12 +67,6 @@ nav a {
 nav a:hover {
   background-color: var(--accent02);
   color: var(--dark)
-}
-
-.banner {
-  padding: 5%;
-  background-image: url('../images/pattern.jpg');
-  background-size: cover;
 }
 
 main {
