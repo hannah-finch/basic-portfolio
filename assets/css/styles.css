@@ -52,6 +52,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .banner {
@@ -84,7 +85,7 @@ header {
   text-align: right;
   margin: 0;
   line-height: 1.2;
-}
+  }
 
 nav li {
   float: left;
@@ -191,6 +192,7 @@ main {
 
 .contact-info ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -207,3 +209,47 @@ main {
   background-color: var(--mid);
   color: var(--accent02);
 } 
+
+@media screen and (max-width: 850px) { 
+  /* Moves the section names and line to make more room*/
+  .section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line {
+    height: 2px;
+    width: 50%;
+    margin: 10px 0 40px 0;
+  }
+
+  /* removes extra space */
+  .section-name {
+    flex-basis: auto;
+  }
+
+  .contact-info ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  nav li {
+    float: none;
+    font-size: 14px;
+  }
+
+  .banner {
+    height: 10em;
+  }
+  
+  .small-project {
+    width: 100%
+  }
+}
