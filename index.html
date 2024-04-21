@@ -10,10 +10,10 @@
     <h1 class="title">Hannah Schwen</h1>
     <nav>
       <ul>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Contact Me</a></li>
-        <li><a href="#">Resume</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="./assets/not-my-resume.pdf">Resume</a></li>
       </ul>
     </nav>
   </header>
@@ -24,7 +24,7 @@
 
   <main>
     <!-- Introductory section -->
-    <section class="section">
+    <section id="about-me" class="section">
       <h2 class="section-name">About Me</h2>
       <div class="line"></div>
       <div>
@@ -46,17 +46,18 @@
     </section>
 
     <!-- Work section -->
-    <section class="section">
+    <section id="work" class="section">
       <h2 class="section-name">Work</h2>
       <div class="line"></div>
       <div class="work">
-
-        <div id="project-01" class="project">
-          <div class="label">
-            <h4 class="project-name">Horiseon Code Refractor</h4>
-            <p>HTML/CSS</p>
+        <a href="https://github.com/hannahschwen/horiseon-update">
+          <div id="project-01" class="project">
+            <div class="label">
+              <h4 class="project-name">Horiseon Code Refractor</h4>
+              <p>HTML/CSS</p>
+            </div>
           </div>
-        </div>
+        </a>
 
         <div class="small-project-container">
           <!-- replicate the next 6 lines to add more projects -->
@@ -93,16 +94,16 @@
     </section>
 
     <!-- Contact section -->
-    <section class="section">
+    <section id="contact" class="section">
       <h2 class="section-name">Contact Me</h2>
       <div class="line"></div>
       <div class="contact-info">
         <ul>
-          <li><a href="#">555.555.5555</a></li>
-          <li><a href="#">hannahschwen@gmail.com</a></li>
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Spotify</a></li>
+          <li><a href="tel:5555555555">555.555.5555</a></li>
+          <li><a href="mailto:hannahschwen@gmail.com">hannahschwen@gmail.com</a></li>
+          <li><a href="https://github.com/hannahschwen">GitHub</a></li>
+          <li><a href="https://twitter.com/">Twitter</a></li>
+          <li><a href="https://open.spotify.com/user/hannahschwen">Spotify</a></li>
         </ul>
       </div>
     </section>
