@@ -76,6 +76,7 @@ header {
   flex: 0 0 120px;
   text-align: right;
   margin: 0;
+  line-height: 1.2;
 }
 
 nav li {
@@ -130,7 +131,8 @@ main {
   display: flex;
   align-items: flex-end;
   padding-bottom: 16px;
-}
+  background-size: cover;
+  }
 
 .small-project {
   width: calc(50% - 14px);
@@ -160,7 +162,7 @@ main {
 
 .label {
   background-color: var(--accent02);
-  color: var(--light);
+  color: var(--dark);
   padding: 4px 8px;
 }
 
@@ -168,10 +170,26 @@ main {
   margin: 0;
 }
 
+.contact-info {
+  width: 100%;
+  align-self: center;
+}
+
+.contact-info ul {
+  display: flex;
+  justify-content: space-between;
+}
 
 .contact-info a {
-  font-size: 120%;
+  display: block;
   color: var(--mid);
   text-decoration: none;
-  border-bottom: 3px solid var(--mid); 
+  border-bottom: 3px solid var(--mid);
+  padding: 2px 6px;
+  margin: auto;
 }
+
+.contact-info a:hover {
+  background-color: var(--mid);
+  color: var(--accent02);
+} 
