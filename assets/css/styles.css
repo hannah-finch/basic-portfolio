@@ -4,6 +4,7 @@
   --dark: #00072d;
   --accent01: #db5461;
   --accent02: #36827f;
+  --tint: #99b6b9;
 }
 
 body {
@@ -55,7 +56,9 @@ header {
   background-size: cover;
   display: flex;
   height: 20em;
-  justify-content: flex-end; 
+  justify-content: flex-end;
+  background-color: var(--tint);
+  background-blend-mode: multiply;
 }
 
 .title {
@@ -91,6 +94,7 @@ nav a {
   border-bottom: 3px solid var(--accent02);
   padding: 4px 8px;
   margin: 6px;
+  transition: background-color .2s;
 }
 
 nav a:hover {
@@ -132,7 +136,14 @@ main {
   align-items: flex-end;
   padding-bottom: 16px;
   background-size: cover;
+  background-color: var(--tint);
+  background-blend-mode: multiply;
+  transition: background-color .3s;
   }
+
+.project:hover {
+  background-color: transparent;
+}
 
 .small-project {
   width: calc(50% - 14px);
@@ -187,6 +198,7 @@ main {
   border-bottom: 3px solid var(--mid);
   padding: 2px 6px;
   margin: auto;
+  transition: background-color .2s;
 }
 
 .contact-info a:hover {
