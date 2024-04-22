@@ -17,24 +17,12 @@ body {
   line-height: 1.5;
 }
 
-h1, h2, h3 {
+main {
+  margin: 0 10%;
+}
+
+h1, h3 {
   margin: 2% 0;
-}
-
-h1 {
-  font-size: 210%;
-}
-
-h2 {
-  font-size: 180%;
-}
-
-h3 {
-  font-size: 150%;
-}
-
-h4 {
-  font-size: 130%;
 }
 
 p {
@@ -45,6 +33,7 @@ a {
   text-decoration: none;
 }
 
+/* Header stylings-------------- */
 header {
   padding: 8px 5% 0px 0px;
   background-color: var(--dark);
@@ -57,44 +46,16 @@ header {
   z-index: 1;  /* brings header forward so shadow is visible */
 }
 
-.banner {
-  padding: 0 6%;
-  background-image: url('../images/painting.jpg');
-  background-size: cover;
-  display: flex;
-  height: 20em;
-  justify-content: flex-end;
-  background-color: var(--tint);
-  background-blend-mode: multiply;
-  box-shadow: 0px 0px 6px var(--shadow);
-
-}
-
 .title {
+  font-size: 210%;
   color: var(--dark);
   background-color: var(--accent01);
   padding: 0 12px 0 8%;
-  flex: 0 0 auto;
   box-shadow: 0px 0px 4px var(--shadow);
 }
-
-.subtitle {
-  color: var(--dark);
-  background-color: var(--accent02);
-  align-self: flex-end;
-  padding: 2px 12px;
-  box-shadow: 0px 0px 4px var(--shadow);
-}
-
-.section-name{
-  flex: 0 0 120px;
-  text-align: right;
-  margin: 0;
-  line-height: 1.2;
-  }
 
 nav li {
-  float: left;
+  float: left; /* Makes the nav run horizontally */
 }
 
 nav a {
@@ -111,25 +72,50 @@ nav a:hover {
   color: var(--dark);
 }
 
-main {
-  margin: 0 10%;
+/* Banner stylings-------------- */
+.banner {
+  padding: 0 6%;
+  background-image: url('../images/painting.jpg');
+  background-size: cover;
+  display: flex;
+  height: 20em;
+  justify-content: flex-end;
+  background-color: var(--tint);
+  background-blend-mode: multiply;
+  box-shadow: 0px 0px 6px var(--shadow);
 }
 
+.subtitle {
+  font-size: 150%;
+  color: var(--dark);
+  background-color: var(--accent02);
+  align-self: flex-end;
+  padding: 2px 12px;
+  box-shadow: 0px 0px 4px var(--shadow);
+}
+
+/* General section styles-------------- */
 .section {
   display: flex;
   margin: 80px 0px;
 }
 
+.section-name {
+  font-size: 180%;
+  flex: 0 0 120px; /* Keeps the width consistent between sections */
+  text-align: right;
+  line-height: 1.2;
+  }
+
 .line {
-  flex: 0 0 auto;
+  flex: 0 0 auto; /* Keeps line width consistent */
   background-color: var(--dark);
   width: 3px;
   margin: 0 27px 0 14px;
 }
 
-.work {
-  display: flex;
-  flex-direction: column;
+/* Work section styles------------------ */
+.work-container {
   width: 100%;
 }
 
@@ -141,6 +127,7 @@ main {
 .project {
   margin: 6px;
   border: 5px solid var(--accent02);
+  box-shadow: 0px 0px 1.5px var(--shadow);
   display: flex;
   align-items: flex-end;
   padding-bottom: 16px;
@@ -148,7 +135,6 @@ main {
   background-color: var(--tint);
   background-blend-mode: multiply;
   transition: background-color .3s;
-  box-shadow: 0px 0px 1.5px var(--shadow);
   }
 
 .project:hover {
@@ -156,10 +142,11 @@ main {
 }
 
 .small-project {
-  width: calc(50% - 14px);
+  width: calc(50% - 12px); /* Calculation accounts for project margin */
   height: 8em;
 }
 
+/* Background images for each project------- */
 #project-01 {
   background-image: url('../images/horiseon-screenshot.png');
   height: 22em;
@@ -181,28 +168,33 @@ main {
   background-image: url('../images/run.jpg');
 }
 
+/* Project label styles----------- */
 .label {
   background-color: var(--accent02);
   color: var(--dark);
   padding: 4px 8px;
 }
 
+.label h4 {
+  font-size: 130%;
+}
 .label p {
   margin: 0;
 }
 
-.contact-info {
+/* Contact section styles---------- */
+.contact-container {
   width: 100%;
   align-self: center;
 }
 
-.contact-info ul {
+.contact-container ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.contact-info a {
+.contact-container a {
   display: block;
   color: var(--dark);
   border-bottom: 2px solid var(--dark);
@@ -211,25 +203,27 @@ main {
   transition: background-color .2s;
 }
 
-.contact-info a:hover {
+.contact-container a:hover {
   background-color: var(--dark);
   color: var(--accent02);
 } 
 
+/* For wide screens--------- */
 @media screen and (min-width: 1400px){
   main {
-    margin: 0 20%;
+    margin: 0 20%; /* Increases margin for wide screens */
   }
 }
 
+/* For smaller screens--------- */
 @media screen and (max-width: 850px) { 
-  /* Moves the section names and line to make more room*/
-  .section {
+  .section { /* Moves the section names and line to make more room*/
     flex-direction: column;
     align-items: center;
+    margin: 40px 0;
   }
 
-  .line {
+  .line { /* Changes line horizontal */
     height: 2px;
     width: 50%;
     margin: 10px 0 40px 0;
@@ -240,12 +234,13 @@ main {
     flex-basis: auto;
   }
 
-  .contact-info ul {
+  .contact-container ul {
     flex-direction: column;
     align-items: center;
   }
 }
 
+/* For smallest screens----------- */
 @media screen and (max-width: 500px) {
   header {
     flex-direction: column;
@@ -257,7 +252,7 @@ main {
   }
 
   .banner {
-    height: 10em;
+    height: 12em;
   }
   
   .small-project {
